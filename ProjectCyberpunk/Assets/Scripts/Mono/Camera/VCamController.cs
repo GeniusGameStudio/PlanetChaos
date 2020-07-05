@@ -25,6 +25,7 @@ public class VCamController : MonoBehaviour
             vcam.m_Lens.OrthographicSize /= scaleRate;
         else if (mousewheel > 0)
             vcam.m_Lens.OrthographicSize *= scaleRate;
-        
+
+        vcam.m_Lens.OrthographicSize = Mathf.Clamp(vcam.m_Lens.OrthographicSize, 5f, 7.159864f);
     }
 }
