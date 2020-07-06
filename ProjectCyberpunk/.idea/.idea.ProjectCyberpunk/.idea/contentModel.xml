@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\29579\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\29579\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_ProjectCyberpunk.-1890138117.00" t="ExcludeRecursive" />
+    <e p="D:\Users\29579\Desktop\cd\ProjectCyberpunk\ProjectCyberpunk\ProjectCyberpunk" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="ZPL" t="Include">
+          <e p="Robot Shooting Game" t="Include">
+            <e p="Read Me.txt" t="Include" />
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="ZPL_PlayerController_Locus" t="Include">
+              <e p="Boss.cs" t="Include" />
+              <e p="BulletClass.cs" t="Include" />
+              <e p="ControlClass.cs" t="Include" />
+              <e p="IBullet.cs" t="Include" />
+              <e p="IRadial.cs" t="Include" />
+              <e p="ISpecial.cs" t="Include" />
+              <e p="ParaCurve.cs" t="Include" />
+              <e p="Radial.cs" t="Include" />
+              <e p="TrackBullet.cs" t="Include" />
+            </e>
+            <e p="zpl_test" t="Include">
+              <e p="Bullet.cs" t="Include" />
+              <e p="BulletPoll.cs" t="Include" />
+              <e p="PlayerController.cs" t="Include" />
+              <e p="Projectile.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="ProjectCyberpunk.sln" t="IncludeFlat" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
