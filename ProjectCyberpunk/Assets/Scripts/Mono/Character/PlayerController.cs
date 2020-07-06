@@ -10,6 +10,9 @@ public class PlayerController : MonoBehaviour
     //跳跃力度
     public float jumpForce = 200;
 
+    //头顶检测点
+    public Transform headCheckPoint;
+
     //地面检测点
     public Transform groundCheckPoint;
 
@@ -36,6 +39,9 @@ public class PlayerController : MonoBehaviour
 
     //地面检查
     private bool isGround;
+
+    //头顶检查
+    private bool isHead;
 
     //是否已跳跃
     private bool isJump;
@@ -75,8 +81,9 @@ public class PlayerController : MonoBehaviour
 
     private void UpdateJump()
     {
-        isGround = Physics2D.OverlapCircle(groundCheckPoint.position, 0.05f, groundCheckLayer);
-        if(isGround)
+        isGround = Physics2D.OverlapCircle(groundCheckPoint.position, 0.2f, groundCheckLayer);
+        isHead = Physics2D.OverlapCircle(headCheckPoint.position, 0.1f, groundCheckLayer);
+        if (isGround)
         {
             isJump = false;
             anim.SetBool("isJump", false);
@@ -117,7 +124,8 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
-            rb.gravityScale = 0;
+            if(!isHead)
+                rb.gravityScale = 0;
         }
     }
 
@@ -125,7 +133,8 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
-            rb.gravityScale = gravityScale;
+            if(!isHead)
+                rb.gravityScale = gravityScale;
         }
     }
 }
