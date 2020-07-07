@@ -262,11 +262,11 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
-    <Reference Include="DOTweenEditor">
-      <HintPath>D:/JackZhang/GitHub/GameDevelopment/ProjectCyberpunk/ProjectCyberpunk/Assets/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
-    </Reference>
     <Reference Include="DOTween">
       <HintPath>D:/JackZhang/GitHub/GameDevelopment/ProjectCyberpunk/ProjectCyberpunk/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTweenEditor">
+      <HintPath>D:/JackZhang/GitHub/GameDevelopment/ProjectCyberpunk/ProjectCyberpunk/Assets/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
     </Reference>
     <Reference Include="JMOAssets_CartoonFXFreeWelcome">
       <HintPath>D:/JackZhang/GitHub/GameDevelopment/ProjectCyberpunk/ProjectCyberpunk/Assets/JMO Assets/Editor/JMOAssets_CartoonFXFreeWelcome.dll</HintPath>
@@ -637,6 +637,9 @@
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/JackZhang/GitHub/GameDevelopment/ProjectCyberpunk/ProjectCyberpunk/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>D:/JackZhang/GitHub/GameDevelopment/ProjectCyberpunk/ProjectCyberpunk/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.2D.Animation.Runtime">
       <HintPath>D:/JackZhang/GitHub/GameDevelopment/ProjectCyberpunk/ProjectCyberpunk/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
     </Reference>
@@ -700,6 +703,9 @@
     <Reference Include="Unity.2D.Animation.Editor">
       <HintPath>D:/JackZhang/GitHub/GameDevelopment/ProjectCyberpunk/ProjectCyberpunk/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>D:/JackZhang/GitHub/GameDevelopment/ProjectCyberpunk/ProjectCyberpunk/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Mathematics.Editor">
       <HintPath>D:/JackZhang/GitHub/GameDevelopment/ProjectCyberpunk/ProjectCyberpunk/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
     </Reference>
@@ -714,12 +720,6 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>D:/JackZhang/GitHub/GameDevelopment/ProjectCyberpunk/ProjectCyberpunk/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Cinemachine">
-      <HintPath>D:/JackZhang/GitHub/GameDevelopment/ProjectCyberpunk/ProjectCyberpunk/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.cinemachine.editor">
-      <HintPath>D:/JackZhang/GitHub/GameDevelopment/ProjectCyberpunk/ProjectCyberpunk/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
