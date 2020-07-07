@@ -44,14 +44,15 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/zpl_test/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ZPL_PlayerController_Locus/ParaCurve.cs" />
         <option value="$PROJECT_DIR$/Assets/ZPL/Scripts/ZPL_PlayerController_Locus/Boss.cs" />
-        <option value="$PROJECT_DIR$/Assets/ZPL/Scripts/ZPL_PlayerController_Locus/BulletClass.cs" />
         <option value="$PROJECT_DIR$/Assets/ZPL/Scripts/ZPL_PlayerController_Locus/ControlClass.cs" />
         <option value="$PROJECT_DIR$/Assets/ZPL/Scripts/ZPL_PlayerController_Locus/IBullet.cs" />
         <option value="$PROJECT_DIR$/Assets/ZPL/Scripts/ZPL_PlayerController_Locus/IRadial.cs" />
         <option value="$PROJECT_DIR$/Assets/ZPL/Scripts/ZPL_PlayerController_Locus/ISpecial.cs" />
-        <option value="$PROJECT_DIR$/Assets/ZPL/Scripts/ZPL_PlayerController_Locus/ParaCurve.cs" />
         <option value="$PROJECT_DIR$/Assets/ZPL/Scripts/ZPL_PlayerController_Locus/Radial.cs" />
         <option value="$PROJECT_DIR$/Assets/ZPL/Scripts/ZPL_PlayerController_Locus/TrackBullet.cs" />
+        <option value="$PROJECT_DIR$/Assets/ZPL/Scripts/zpl_test/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/ZPL/Scripts/ZPL_PlayerController_Locus/ParaCurve.cs" />
+        <option value="$PROJECT_DIR$/Assets/ZPL/Scripts/ZPL_PlayerController_Locus/BulletClass.cs" />
       </list>
     </option>
   </component>

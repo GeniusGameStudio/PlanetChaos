@@ -2,13 +2,14 @@
 //追踪弹类
 public class TrackBullet : MonoBehaviour {
     public Vector2 offset;  // 自生位置和目标位置的偏移
-
+    private GameObject _trackBullet;
+    private Rigidbody2D _rig;
     public Rigidbody2D Shoot(GameObject position, Transform shootPosition, Vector3 mousePosition, float force,
         Transform rotateCenter) {
-        GameObject trackBullet = Instantiate(gameObject, shootPosition.position, shootPosition.rotation);
-        Rigidbody2D rig = trackBullet.GetComponent<Rigidbody2D>();
-        rig.velocity = rotateCenter.right * force;
-        return rig;
+        _trackBullet = Instantiate(gameObject, shootPosition.position, shootPosition.rotation);
+        _rig = _trackBullet.GetComponent<Rigidbody2D>();
+        _rig.velocity = rotateCenter.right * force;
+        return _rig;
         
     }
     //追踪
@@ -20,5 +21,10 @@ public class TrackBullet : MonoBehaviour {
             //rig.velocity = offset * 10;
             rig.velocity = offset * 9;
         }
+    }
+    
+    public void ChangeRotation() {
+        if(_rig != null)
+            _trackBullet.transform.rotation = Quaternion.AngleAxis(Mathf.Atan2(_rig.velocity.y, _rig.velocity.x) * Mathf.Rad2Deg, Vector3.forward);
     }
 }

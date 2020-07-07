@@ -53,6 +53,7 @@ public class ParaCurve : MonoBehaviour {
             case 0: 
                 _radial.Close();  //关闭射线
                 Shoot(_bulletClass);  // 发射抛物弹
+                _bulletClass.ChangeRotation();
                 break;
 
             case 1: {
@@ -65,8 +66,13 @@ public class ParaCurve : MonoBehaviour {
             case 2: {
                 _radial.Close();  // 关闭射线
                 Shoot(_trackBullet);  //发射追踪弹
-                if(_trackBulletRig != null && enemy)  // 如果有敌人，则开始追踪
+                _trackBullet.ChangeRotation();
+                if (_trackBulletRig != null && enemy) // 如果有敌人，则开始追踪
+                {
                     _trackBullet.CheckPosition(enemy, _trackBulletRig);
+                    _trackBullet.ChangeRotation();
+                }
+                
                 break;
             }
                 
