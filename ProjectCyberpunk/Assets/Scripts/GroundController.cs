@@ -26,7 +26,7 @@ public class GroundController : MonoBehaviour {
 		BulletController.groundController = this;
 
 		//DestroyGround(circle);
-		GameManager.Instance.baseTimer.SetTimer(0.2f, () => { DestroyGround(circle); });
+		//GameManager.Instance.baseTimer.SetTimer(0.2f, () => { DestroyGround(circle); });
 	}
 
 

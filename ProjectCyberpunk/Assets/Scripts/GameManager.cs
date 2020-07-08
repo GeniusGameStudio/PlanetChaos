@@ -1,4 +1,5 @@
 ﻿using Cinemachine;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TurnBaseUtil;
@@ -21,8 +22,13 @@ public class GameManager : MonoBehaviour
     private Team teamA;
     private Team teamB;
 
-    //计时器
-    public BaseTimer baseTimer;
+    public IEnumerator DelayFuc(Action action, float delaySeconds)
+    {
+        Log("StartDelay");
+        yield return new WaitForSeconds(delaySeconds);
+        action();
+        Log("EndDelay");
+    }
 
     public void Log(string msg)
     {
@@ -37,7 +43,7 @@ public class GameManager : MonoBehaviour
     void InitGame()
     {
         TurnBaseController = new TurnBaseController();
-
+        Log("GameInit");
         vCam.Follow = null;
 
         teamA = new Team("A");
@@ -75,7 +81,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         //DontDestroyOnLoad(gameObject);
-        //baseTimer.SetTimer(1f, () => { InitGame(); });
+        StartCoroutine(DelayFuc(() => { InitGame(); }, 1f));
     }
 
     // Update is called once per frame

@@ -6,6 +6,9 @@ TagManager:
   tags:
   - FxTemporaire
   - Ground
+  - Bullet
+  - BulletCollider
+  - Explosion
   layers:
   - Default
   - TransparentFX
@@ -16,8 +19,8 @@ TagManager:
   - 
   - 
   - Ground
-  - 
-  - 
+  - Player
+  - Bullet
   - 
   - 
   - 

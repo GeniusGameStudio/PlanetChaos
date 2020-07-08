@@ -95,6 +95,15 @@ namespace TurnBaseUtil
             currentTurnPlayerIndex = (currentTurnPlayerIndex + 1) % teamPlayers.Count;
         }
 
+        /// <summary>
+        /// 获得当前队伍人数
+        /// </summary>
+        /// <returns></returns>
+        public int GetCurrentTeamPlayerCount()
+        {
+            return teamPlayers.Count;
+        }
+
     }
 }
 

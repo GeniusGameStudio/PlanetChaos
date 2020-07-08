@@ -20,6 +20,8 @@ namespace TurnBaseUtil
 
         public Team belongsTo { get; set; }
 
+        private bool isDestroyed;
+
         //血量
         private int hp;
         public int HP { get { return hp; } set { hp = value; } }
@@ -33,8 +35,18 @@ namespace TurnBaseUtil
         {
             if (transform.position.y < -8f)
             {
-                belongsTo.RemoveTeamPlayer(this);
-                Destroy(gameObject);
+                if (!isDestroyed)
+                {
+                    belongsTo.RemoveTeamPlayer(this);
+                    if(belongsTo.GetCurrentTeamPlayerCount() > 0)
+                    {
+                        GameManager.Instance.TurnBaseController.EndTurn();
+                        GameManager.Instance.TurnBaseController.StartTurn();
+                    }
+                    Destroy(gameObject);
+                    isDestroyed = true;
+                }
+                
             }
         }
     }
