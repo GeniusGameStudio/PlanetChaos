@@ -43,7 +43,7 @@ public class Menu : MonoBehaviour
         About.SetActive(true);
     }
 
-
+    //返回
     public void Back()
     {
         About.SetActive(false);

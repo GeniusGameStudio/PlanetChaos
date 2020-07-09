@@ -459,7 +459,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bag: {fileID: 3739923432216713917}
-  information: {fileID: 0}
+  information: {fileID: 555566259678009962}
 --- !u!1 &3739923432023359079
 GameObject:
   m_ObjectHideFlags: 0

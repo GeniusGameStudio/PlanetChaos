@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//为地图上所有物品添加此脚本来将物品存入背包
+//为地图上所有可收集物品添加此脚本来将物品存入背包
 public class ItemOnWorld : MonoBehaviour
 {
     public Item thisItem;
