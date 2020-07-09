@@ -30,13 +30,38 @@ namespace TurnBaseUtil
         private int index;
         public int Index { get { return index; } set { index = value; } }
 
-        //队伍总血量，默认为%100
-        private float totalHP = 100f;
-        public float TotalHP { get { return totalHP; } set { totalHP = value; } }
+        //队伍总血量
+        private int totalHP;
+        public int TotalHP { get { return totalHP; } set { totalHP = value; } }
+
+        private int maxHP;
 
         public Team(string name)
         {
             this.name = name;
+        }
+
+        public void InitHP()
+        {
+            totalHP = 100 * teamPlayers.Count;
+            maxHP = totalHP;
+        }
+
+        public void UpdateHP()
+        {
+            int tmpHP = 0;
+            foreach(var teamPlayer in teamPlayers)
+            {
+                tmpHP += teamPlayer.hp;
+            }
+            totalHP = tmpHP;
+
+            bool isTeamA = (Name == "A");
+
+            if(isTeamA)
+                UIManager.Instance.UpdateTeamA_HP_UI(totalHP * 1.0f / maxHP);
+            else
+                UIManager.Instance.UpdateTeamB_HP_UI(totalHP * 1.0f / maxHP);
         }
 
         /// <summary>

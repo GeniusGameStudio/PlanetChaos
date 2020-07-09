@@ -23,9 +23,26 @@ public class UIManager : MonoBehaviour
 
     public Text windForceValueText;
 
+    public RectTransform teamA_HP_Mask;
+    private float maskA_Width;
+
+    public RectTransform teamB_HP_Mask;
+    private float maskB_Width;
+
     void Start()
     {
-        
+        maskA_Width = teamA_HP_Mask.sizeDelta.x;
+        maskB_Width = teamB_HP_Mask.sizeDelta.x;
+    }
+
+    public void UpdateTeamA_HP_UI(float percentage)
+    {
+        teamA_HP_Mask.sizeDelta = new Vector2(maskA_Width * percentage, teamA_HP_Mask.sizeDelta.y);
+    }
+
+    public void UpdateTeamB_HP_UI(float percentage)
+    {
+        teamB_HP_Mask.sizeDelta = new Vector2(maskB_Width * percentage, teamB_HP_Mask.sizeDelta.y);
     }
 
     public void GameInited()

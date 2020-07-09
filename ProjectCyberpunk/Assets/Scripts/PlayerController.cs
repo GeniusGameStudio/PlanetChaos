@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using TurnBaseUtil;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -80,9 +81,6 @@ public class PlayerController : MonoBehaviour
     //子弹初始位置
     public Transform bulletInitialTransform; 
 
-    //箭头（代表处于自己回合）位置
-    public Transform downArrowTransform;
-
     //是否处于瞄准状态
     private bool targetting;
 
@@ -93,6 +91,10 @@ public class PlayerController : MonoBehaviour
     private float mouseScrollWheel;
 
     public float size = 0.95f;
+
+    private PlayerUI ui;
+
+    private TeamPlayer player;
 
     private void OnEnable()
     {
@@ -106,7 +108,7 @@ public class PlayerController : MonoBehaviour
         }
         //rb.gravityScale = 0;
         GameManager.Instance.vCam.Follow = transform;
-        downArrowTransform.gameObject.SetActive(true);
+        ui.SetArrowActive(true);
     }
 
     private void OnDisable()
@@ -115,8 +117,8 @@ public class PlayerController : MonoBehaviour
         rb.gravityScale = 0;
         Debug.Log(gameObject.name + "OnDisable");
         targetting = false;
-        
-        downArrowTransform.gameObject.SetActive(false);
+
+        ui.SetArrowActive(false);
     }
 
     void Start()
@@ -124,6 +126,8 @@ public class PlayerController : MonoBehaviour
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
+        ui = GetComponent<PlayerUI>();
+        player = GetComponent<TeamPlayer>();
         weaponTransform = transform.Find("Bazooka").gameObject.transform;
         bodyTransform = transform;
         gravityScale = rb.gravityScale;
@@ -317,10 +321,10 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    void UpdateHurt()
+    void UpdateHurt(int damage)
     {
         anim.SetBool("isHurt", true);
-
+        player.DoHurt(damage);
         StartCoroutine(GameManager.Instance.DelayFuc(() => { anim.SetBool("isHurt", false); }, 1f));
     }
 
@@ -361,8 +365,10 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Explosion"))
         {
             Debug.Log("ExplosionHurt");
-
-            UpdateHurt();
+            Vector2 vec = collision.gameObject.transform.position - transform.position;
+            int damage = (int)(10f / vec.magnitude);
+            UpdateHurt(damage);
+            player.belongsTo.UpdateHP();
         }
         else if (collision.gameObject.CompareTag("BulletCollider"))
         {

@@ -80,6 +80,7 @@
     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoRotate.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightFlicker.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightIntensityFade.cs" />
+    <Compile Include="Assets\PlayerUI.cs" />
     <Compile Include="Assets\Scripts\BaseTimer.cs" />
     <Compile Include="Assets\Scripts\Bazooka.cs" />
     <Compile Include="Assets\Scripts\BulletController.cs" />
@@ -106,19 +107,6 @@
     <Compile Include="Assets\lkq\Scripts\Creatpoint.cs" />
     <Compile Include="Assets\lkq\Scripts\Playermove.cs" />
     <Compile Include="Assets\lkq\Scripts\Ray.cs" />
-    <Compile Include="Assets\yxz\Scripts\Bag\MoveBag.cs" />
-    <Compile Include="Assets\yxz\Scripts\Bag\OpenBag.cs" />
-    <Compile Include="Assets\yxz\Scripts\InventoryScripts\Inventory.cs" />
-    <Compile Include="Assets\yxz\Scripts\InventoryScripts\InventoryManger.cs" />
-    <Compile Include="Assets\yxz\Scripts\InventoryScripts\Item.cs" />
-    <Compile Include="Assets\yxz\Scripts\InventoryScripts\Slot.cs" />
-    <Compile Include="Assets\yxz\Scripts\ItemOnWorld.cs" />
-    <Compile Include="Assets\yxz\Scripts\Menu\Menu.cs" />
-    <Compile Include="Assets\yxz\Scripts\Menu\MouseEnter.cs" />
-    <Compile Include="Assets\yxz\Scripts\Porp\Drum.cs" />
-    <Compile Include="Assets\yxz\Scripts\Porp\IProp.cs" />
-    <Compile Include="Assets\yxz\Scripts\Porp\Mine.cs" />
-    <Compile Include="Assets\yxz\Scripts\Porp\Trap.cs" />
     <None Include="Assets\JMO Assets\Cartoon FX\Shaders\CFX3 Multiply Color.shader" />
     <None Include="Assets\JMO Assets\Cartoon FX\CartoonFX Free.txt" />
     <None Include="Assets\JMO Assets\Cartoon FX Easy Editor\CartoonFX Easy Editor Readme.txt" />

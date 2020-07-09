@@ -22,13 +22,21 @@ namespace TurnBaseUtil
 
         private bool isDestroyed;
 
+        private PlayerUI ui;
+
         //血量
-        private int hp;
-        public int HP { get { return hp; } set { hp = value; } }
+        public int hp = 100;
+
+        public void DoHurt(int damage)
+        {
+            hp -= damage;
+            ui.UpdatePlayerHP(hp);
+        }
 
         void Start()
         {
             PlayerController = GetComponent<PlayerController>();
+            ui = GetComponent<PlayerUI>();
         }
 
         void Update()
@@ -43,6 +51,9 @@ namespace TurnBaseUtil
                         GameManager.Instance.TurnBaseController.EndTurn();
                         GameManager.Instance.TurnBaseController.StartTurn();
                     }
+                    hp = 0;
+                    ui.UpdatePlayerHP(hp);
+                    belongsTo.UpdateHP();
                     Destroy(gameObject);
                     isDestroyed = true;
                 }

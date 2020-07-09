@@ -53,6 +53,7 @@ public class GameManager : MonoBehaviour
             teamPlayer.PlayerController.enabled = false;
             teamPlayer.belongsTo = teamA;
         }
+        teamA.InitHP();
 
         teamB = new Team("B");
         foreach (var teamPlayer in teamPlayersB)
@@ -61,6 +62,8 @@ public class GameManager : MonoBehaviour
             teamPlayer.PlayerController.enabled = false;
             teamPlayer.belongsTo = teamB;
         }
+
+        teamB.InitHP();
 
         TurnBaseController.AddTeam(teamA);
         TurnBaseController.AddTeam(teamB);
