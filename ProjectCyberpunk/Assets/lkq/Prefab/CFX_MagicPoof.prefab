@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1619898544860968809}
   - component: {fileID: 1619898544879317545}
   - component: {fileID: 1619898544879405961}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Smoke Colored
   m_TagString: FxTemporaire
   m_Icon: {fileID: 0}
@@ -4680,7 +4680,7 @@ GameObject:
   - component: {fileID: 1619898544879317547}
   - component: {fileID: 1619898544879405963}
   - component: {fileID: 1619898544854392491}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: CFX_MagicPoof
   m_TagString: FxTemporaire
   m_Icon: {fileID: 0}
@@ -9371,7 +9371,7 @@ GameObject:
   - component: {fileID: 1619898544860968813}
   - component: {fileID: 1619898544879317549}
   - component: {fileID: 1619898544879405965}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: White Lines
   m_TagString: FxTemporaire
   m_Icon: {fileID: 0}
@@ -14075,7 +14075,7 @@ GameObject:
   - component: {fileID: 1619898544860968817}
   - component: {fileID: 1619898544879317553}
   - component: {fileID: 1619898544879405969}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Smoke Colored 3
   m_TagString: FxTemporaire
   m_Icon: {fileID: 0}
@@ -18779,7 +18779,7 @@ GameObject:
   - component: {fileID: 1619898544860968819}
   - component: {fileID: 1619898544879317555}
   - component: {fileID: 1619898544879405971}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Stars Yellow
   m_TagString: FxTemporaire
   m_Icon: {fileID: 0}
@@ -23483,7 +23483,7 @@ GameObject:
   - component: {fileID: 1619898544860968821}
   - component: {fileID: 1619898544879317557}
   - component: {fileID: 1619898544879405973}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Stars Colored
   m_TagString: FxTemporaire
   m_Icon: {fileID: 0}
@@ -28187,7 +28187,7 @@ GameObject:
   - component: {fileID: 1619898544860968823}
   - component: {fileID: 1619898544879317559}
   - component: {fileID: 1619898544879405975}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Smoke Colored 2
   m_TagString: FxTemporaire
   m_Icon: {fileID: 0}
@@ -32891,7 +32891,7 @@ GameObject:
   - component: {fileID: 1619898544860968825}
   - component: {fileID: 1619898544879317561}
   - component: {fileID: 1619898544879405977}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Stars Colored 4
   m_TagString: FxTemporaire
   m_Icon: {fileID: 0}
@@ -37559,7 +37559,7 @@ GameObject:
   - component: {fileID: 1619898544860968827}
   - component: {fileID: 1619898544879317563}
   - component: {fileID: 1619898544879405979}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Stars Colored 3
   m_TagString: FxTemporaire
   m_Icon: {fileID: 0}
@@ -42227,7 +42227,7 @@ GameObject:
   - component: {fileID: 1619898544860968829}
   - component: {fileID: 1619898544879317565}
   - component: {fileID: 1619898544879405981}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Stars Colored 2
   m_TagString: FxTemporaire
   m_Icon: {fileID: 0}
@@ -46931,7 +46931,7 @@ GameObject:
   - component: {fileID: 1619898544860968831}
   - component: {fileID: 1619898544879317567}
   - component: {fileID: 1619898544879405983}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Smoke Colored 4
   m_TagString: FxTemporaire
   m_Icon: {fileID: 0}
