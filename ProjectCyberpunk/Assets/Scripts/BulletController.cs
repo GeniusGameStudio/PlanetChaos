@@ -11,8 +11,6 @@ public class BulletController : MonoBehaviour {
 
 	public Transform PlayerTransform { get; set; }
 
-	private Vector2 windForce;
-
 	private bool updateAngle = true; 
 
 	public GameObject bulletSmoke;
@@ -35,9 +33,9 @@ public class BulletController : MonoBehaviour {
 		rb = GetComponent<Rigidbody2D>();
 		sprite = GetComponentInChildren<SpriteRenderer>();
 		//rb.velocity = new Vector2(5f, 10f);
-		windForce = new Vector2(Random.Range(-5f, 5f) * 50, 0);
-		Debug.Log("winforce:" + windForce);
-		rb.AddForce(windForce);
+		
+		Debug.Log("winforce:" + GameManager.Instance.TurnBaseController.TurnProperties.WindForce);
+		rb.AddForce(GameManager.Instance.TurnBaseController.TurnProperties.WindForce);
 	}
 	
 	void Update () {

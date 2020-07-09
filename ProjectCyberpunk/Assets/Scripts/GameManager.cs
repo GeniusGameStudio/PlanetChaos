@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
 
     void InitGame()
     {
-        TurnBaseController = new TurnBaseController();
+        
         Log("GameInit");
         vCam.Follow = null;
 
@@ -81,7 +81,8 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         //DontDestroyOnLoad(gameObject);
-        StartCoroutine(DelayFuc(() => { InitGame(); }, 1f));
+        TurnBaseController = new TurnBaseController();
+        StartCoroutine(DelayFuc(() => { SendMessage("GameInited"); InitGame();  }, 1f));
     }
 
     // Update is called once per frame

@@ -7,27 +7,15 @@ public class StartState : ISceneState
 {
     public StartState(SceneStateController Controller) : base(Controller)
     {
-        this.StateName = "StartState";
+        StateName = "StartState";
     }
 
-    //开始
-    public override void StateBegin()
+    public override void StateUpdate()
     {
-        //数据加载TODO
-
-        //按钮监听
-        Button btnStartMenu = UITool.GetUIComponent<Button>("StartMenuButton");
-
-        btnStartMenu.onClick.AddListener(()=> OnStartMenuBtnClick(btnStartMenu));
-        
+        if (Input.anyKey)
+        {
+            m_Controller.SetState(new MainMenuState(m_Controller), "MainMenuScene");
+        }
     }
 
-    /// <summary>
-    /// 开始主菜单按钮按下
-    /// </summary>
-    /// <param name="button"></param>
-    private void OnStartMenuBtnClick(Button button)
-    {
-        m_Controller.SetState(new MainMenuState(m_Controller), "MainMenuScene");
-    }
 }

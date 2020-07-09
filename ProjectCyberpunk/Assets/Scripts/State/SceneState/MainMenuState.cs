@@ -16,9 +16,9 @@ public class MainMenuState : ISceneState
         //数据加载TODO
 
         //按钮监听
-        Button btnStartBattle = UITool.GetUIComponent<Button>("StartBattleButton");
+        Button btnStartGame = UITool.GetUIComponent<Button>("StartGameButton");
 
-        btnStartBattle.onClick.AddListener(() => OnStartBattleBtnClick(btnStartBattle));
+        btnStartGame.onClick.AddListener(() => OnStartGameBtnClick(btnStartGame));
 
     }
 
@@ -26,7 +26,7 @@ public class MainMenuState : ISceneState
     /// 开始战斗场景按钮按下
     /// </summary>
     /// <param name="button"></param>
-    private void OnStartBattleBtnClick(Button button)
+    private void OnStartGameBtnClick(Button button)
     {
         m_Controller.SetState(new BattleState(m_Controller), "BattleScene");
     }

@@ -5,14 +5,15 @@
 
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace TurnBaseUtil
 {
     public class TurnProperties
     {
         //风力
-        private float windForce;
-        public float WindForce { get { return windForce; } set { windForce = value; } }
+        private Vector2 windForce;
+        public Vector2 WindForce { get { return windForce; } set { windForce = value; } }
 
         //TODO
     }

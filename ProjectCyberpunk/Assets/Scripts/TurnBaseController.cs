@@ -2,11 +2,11 @@
  Author: JackZhang
  Description: 回合制工具类
  */
-
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
+using UnityEngine;
+using UnityEngine.Events;
+using Random = UnityEngine.Random;
 
 namespace TurnBaseUtil
 {
@@ -22,13 +22,16 @@ namespace TurnBaseUtil
         private int currentTurnTeamIndex = 0;
 
         //回合参数
-        private TurnProperties turnProperties;
+        private TurnProperties turnProperties = new TurnProperties();
         public TurnProperties TurnProperties { get { return turnProperties; } set { turnProperties = value; } }
 
         public TurnBaseController()
         {
 
         }
+
+        public UnityEvent OnTurnStart = new UnityEvent();
+        public UnityEvent OnTurnEnd = new UnityEvent();
 
         #region 队伍操作
 
@@ -103,6 +106,7 @@ namespace TurnBaseUtil
         /// </summary>
         public void StartTurn()
         {
+
             //GameManager.Instance.Log("当前回合队伍index" + currentTurnTeamIndex);
             Team currentTeam = teams[currentTurnTeamIndex];
             currentTeam.IsSelfTurn = true;
@@ -110,6 +114,10 @@ namespace TurnBaseUtil
             {
                 currentTeam.GetCurrentTurnPlayer().PlayerController.enabled = true;
             }
+            //初始化回合参数（风力等。。)
+            turnProperties.WindForce = new Vector2(Random.Range(-5f, 5f) * 50, 0);
+            OnTurnStart.Invoke();
+
         }
 
         /// <summary>
@@ -122,9 +130,11 @@ namespace TurnBaseUtil
             if(currentTeam.GetCurrentTurnPlayer() != null)
             {
                 currentTeam.GetCurrentTurnPlayer().PlayerController.enabled = false;
-                currentTeam.NextTurn();
             }
+            currentTeam.NextTurn();
             NextTurn();
+
+            OnTurnEnd.Invoke();
         }
 
         /// <summary>
