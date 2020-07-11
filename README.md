@@ -1,6 +1,8 @@
 # PlanetChaos
 
-[Latest Test Release]()
+A game like `Worms`, made with **Unity 2019.4f1(LTS)** by **GeniusGameStudio**.
+
+[Latest Test Release](https://github.com/GeniusGameStudio/PlanetChaos/releases/tag/0.02)
 
 ## ScreenShots:
 
