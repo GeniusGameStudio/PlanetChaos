@@ -31,6 +31,7 @@ public class BulletController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		currentTurn = GameManager.Instance.TurnBaseController.GetCurrentTurnTeamIndex();
+		//GameManager.Instance.vCam.m_Lens.OrthographicSize = 5;
 		GameManager.Instance.vCam.Follow = gameObject.transform;
 		rb = GetComponent<Rigidbody2D>();
 		sprite = GetComponentInChildren<SpriteRenderer>();

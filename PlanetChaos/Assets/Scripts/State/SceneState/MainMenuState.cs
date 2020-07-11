@@ -18,13 +18,31 @@ public class MainMenuState : ISceneState
         //数据加载TODO
 
         //按钮监听
-        Button btnStartGame = UITool.GetUIComponent<Button>("StartGameButton");
+        Button btnStartGame = UITool.GetButton("StartGameButton");
 
         btnStartGame.onClick.AddListener(() => OnStartGameBtnClick(btnStartGame));
 
-        Button btnStartMultiplayerGame = UITool.GetUIComponent<Button>("StartMultiplayerGameButton");
+        Button btnBack = UITool.GetButton("BackButton");
+
+        btnBack.onClick.AddListener(() =>OnBackBtnClick(btnBack));
+
+        Button btnStartMultiplayerGame = UITool.GetButton("StartMultiplayerGameButton");
 
         btnStartMultiplayerGame.onClick.AddListener(() => OnStartMultiplayerBtnClick(btnStartMultiplayerGame));
+
+        Button btnAbout = UITool.GetButton("AboutButton");
+
+        btnAbout.onClick.AddListener(() => OnAboutBtnClick(btnAbout));
+
+        Button btnOk = UITool.GetButton("OkButton");
+
+        btnOk.onClick.AddListener(() => OnOkBtnClick(btnOk));
+
+        Button btnExitGame = UITool.GetButton("ExitGameButton");
+
+        btnExitGame.onClick.AddListener(() =>OnExitGameBtnClick(btnExitGame));
+
+        
 
     }
 
@@ -46,12 +64,49 @@ public class MainMenuState : ISceneState
     }
 
     /// <summary>
+    /// 返回按钮按下
+    /// </summary>
+    /// <param name="button"></param>
+    private void OnBackBtnClick(Button button)
+    {
+        UITool.FindUIGameObject("TeamSettingsPanel").transform.DOMoveY(10f, 1f);
+        UITool.FindUIGameObject("MainMenuPanel").transform.DOMoveY(0, 1f);
+    }
+
+    /// <summary>
     /// 开始本地双人游戏按钮按下
     /// </summary>
     /// <param name="button"></param>
     private void OnStartMultiplayerBtnClick(Button button)
     {
-        UITool.FindUIGameObject("MainMenuPanel").SetActive(false);
+        UITool.FindUIGameObject("MainMenuPanel").transform.DOMoveY(10f, 0f);
         UITool.FindUIGameObject("TeamSettingsPanel").transform.DOMoveY(0, 1f);
+    }
+
+    /// <summary>
+    /// 关于游戏按钮按下
+    /// </summary>
+    /// <param name="button"></param>
+    private void OnAboutBtnClick(Button button)
+    {
+        UITool.FindUIGameObject("AboutPanel").transform.DOMoveY(0, 0f);
+    }
+
+    /// <summary>
+    /// 我知道了按钮按下
+    /// </summary>
+    /// <param name="button"></param>
+    private void OnOkBtnClick(Button button)
+    {
+        UITool.FindUIGameObject("AboutPanel").transform.DOMoveY(10f, 0f);
+    }
+
+    /// <summary>
+    /// 退出游戏按下
+    /// </summary>
+    /// <param name="button"></param>
+    private void OnExitGameBtnClick(Button button)
+    {
+        Application.Quit();
     }
 }

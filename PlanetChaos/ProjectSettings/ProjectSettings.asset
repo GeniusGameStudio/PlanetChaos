@@ -14,7 +14,7 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: GeniusGameStudio
   productName: PlanetChaos
-  defaultCursor: {fileID: 0}
+  defaultCursor: {fileID: 2800000, guid: 9ad03dae91a289645b47db3f20ca037b, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.12941177, g: 0.10980392, b: 0.08627451, a: 1}
   m_ShowUnitySplashScreen: 1
@@ -130,7 +130,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 0.02
+  bundleVersion: 0.03
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -272,7 +272,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 51786a2547bb5d24991b84306c6fe500, type: 3}
+      m_Icon: {fileID: 2800000, guid: 4a087c1257614e843819c172514e9a46, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0

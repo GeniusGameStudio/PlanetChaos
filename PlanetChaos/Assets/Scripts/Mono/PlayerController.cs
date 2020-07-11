@@ -110,6 +110,7 @@ public class PlayerController : MonoBehaviour
             return;
         }
         //rb.gravityScale = 0;
+        GameManager.Instance.vCam.m_Lens.OrthographicSize = 5;
         GameManager.Instance.vCam.Follow = transform;
         ui.SetArrowActive(true);
     }

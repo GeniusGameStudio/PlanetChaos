@@ -33,6 +33,9 @@ public class BattleState : ISceneState
 
         Button btnExitGame = UITool.GetButton("ExitGameButton");
         btnExitGame.onClick.AddListener(() => ExitGame(btnExitGame));
+
+        Button btnEndTurn = UITool.GetButton("EndTurnButton");
+        btnEndTurn.onClick.AddListener(() => EndTurn(btnEndTurn));
     }
 
     public override void StateUpdate()
@@ -58,7 +61,15 @@ public class BattleState : ISceneState
         }
     }
 
-
+    /// <summary>
+    /// 直接结束本回合
+    /// </summary>
+    /// <param name="button"></param>
+    private void EndTurn(Button button)
+    {
+        GameManager.Instance.TurnBaseController.EndTurn();
+        GameManager.Instance.TurnBaseController.StartTurn();
+    }
 
     private void ResumeGame(Button button)
     {
