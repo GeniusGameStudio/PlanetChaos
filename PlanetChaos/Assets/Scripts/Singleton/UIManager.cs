@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using DG.Tweening;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -31,10 +32,22 @@ public class UIManager : MonoBehaviour
 
     public RectTransform windArrow;
 
+    public RectTransform winPanel;
+
+    public Sprite teamA_Sprite;
+    public Sprite teamB_Sprite;
+    public Image teamImage;
+
+    public RectTransform endTurnButton;
+    private float endX;
+    private float endY;
+
     void Start()
     {
         maskA_Width = teamA_HP_Mask.sizeDelta.x;
         maskB_Width = teamB_HP_Mask.sizeDelta.x;
+        endX = endTurnButton.localPosition.x;
+        endY = endTurnButton.localPosition.y;
     }
 
     public void UpdateTeamA_HP_UI(float percentage)
@@ -45,6 +58,37 @@ public class UIManager : MonoBehaviour
     public void UpdateTeamB_HP_UI(float percentage)
     {
         teamB_HP_Mask.sizeDelta = new Vector2(maskB_Width * percentage, teamB_HP_Mask.sizeDelta.y);
+    }
+
+    public void ShowWinInfoUI(string teamName)
+    {
+        switch (teamName)
+        {
+            case "A":
+                teamImage.sprite = teamA_Sprite;
+                break;
+
+            case "B":
+                teamImage.sprite = teamB_Sprite;
+                break;
+        }
+
+        winPanel.DOLocalMoveY(0, 0).SetUpdate(true);
+        UIManager.Instance.SetEndTurnButtonActive(false);
+    }
+
+    public void SetEndTurnButtonActive(bool isActive)
+    {
+        if (isActive)
+        {
+            endTurnButton.DOMoveX(endX, 0);
+            endTurnButton.DOMoveY(endY, 0);
+        }
+        else
+        {
+            endTurnButton.DOMoveX(endX, 0);
+            endTurnButton.DOMoveY(500, 0);
+        }
     }
 
     public void GameInited()

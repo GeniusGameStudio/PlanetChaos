@@ -104,7 +104,7 @@ public class PlayerController : MonoBehaviour
     public AudioClip chargeSFX;
     public AudioClip shootSFX;
 
-
+    public bool IsDead { get; set; }
     private void OnEnable()
     {
         canControl = true;
@@ -120,6 +120,7 @@ public class PlayerController : MonoBehaviour
         GameManager.Instance.vCam.m_Lens.OrthographicSize = 5;
         GameManager.Instance.vCam.Follow = transform;
         ui.SetArrowActive(true);
+        UIManager.Instance.SetEndTurnButtonActive(true);
     }
 
     private void OnDisable()
@@ -173,7 +174,7 @@ public class PlayerController : MonoBehaviour
             shootingEffect.SetActive(true);
             timeShooting = 0f;
             SFX.PlayOneShot(chargeSFX);
-            
+            UIManager.Instance.SetEndTurnButtonActive(false);
         }
     }
 
@@ -312,6 +313,8 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         UpdateCamera();
+        if (IsDead)
+            return;
         if (canControl)
         {
             ProcessInput();
@@ -362,6 +365,8 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
+        if (IsDead)
+            return;
         if (collision.gameObject.CompareTag("Ground") && enabled)
         {
             if (!isHead)
@@ -371,6 +376,8 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
+        if (IsDead)
+            return;
         if (collision.gameObject.CompareTag("Ground") && enabled)
         {
             if (!isHead)
@@ -380,6 +387,8 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (IsDead)
+            return;
         if (collision.gameObject.CompareTag("Explosion"))
         {
             Debug.Log("ExplosionHurt");

@@ -62,11 +62,12 @@ namespace TurnBaseUtil
                 hp = 0;
                 PlayerController.GetComponent<Animator>().SetTrigger("Die");
                 PlayerController.GetComponent<AudioSource>().PlayOneShot(PlayerController.dieSFX);
-                PlayerController.GetComponent<Rigidbody2D>().Sleep();
                 ui.SetHudActive(false);
-                belongsTo.RemoveTeamPlayer(this);
+                RemoveSelf();
+                PlayerController.IsDead = true;
             }
             ui.UpdatePlayerHP(hp);
+            belongsTo.UpdateHP();
         }
 
         void Start()
@@ -75,21 +76,34 @@ namespace TurnBaseUtil
             ui = GetComponent<PlayerUI>();
         }
 
+        private void RemoveSelf()
+        {
+            belongsTo.RemoveTeamPlayer(this);
+            if (belongsTo.GetCurrentTeamPlayerCount() > 0)
+            {
+                GameManager.Instance.TurnBaseController.EndTurn();
+                GameManager.Instance.TurnBaseController.StartTurn();
+            }
+            else
+            {
+                Team winTeam = GameManager.Instance.TurnBaseController.GetTeam(GameManager.Instance.TurnBaseController.NextTurnTeamIndex());
+                Debug.Log(winTeam.Name + "Win");
+                UIManager.Instance.ShowWinInfoUI(winTeam.Name);
+                GameManager.Instance.vCam.Follow = winTeam.GetCurrentTurnPlayer().gameObject.transform;
+                //Time.timeScale = 0;
+            }
+        }
+
         void Update()
         {
             if (transform.position.y < -8f)
             {
-                if (!isDestroyed)
+                if (!isDestroyed && !PlayerController.IsDead)
                 {
-                    belongsTo.RemoveTeamPlayer(this);
-                    if(belongsTo.GetCurrentTeamPlayerCount() > 0)
-                    {
-                        GameManager.Instance.TurnBaseController.EndTurn();
-                        GameManager.Instance.TurnBaseController.StartTurn();
-                    }
                     hp = 0;
                     ui.UpdatePlayerHP(hp);
                     belongsTo.UpdateHP();
+                    RemoveSelf();
                     Destroy(gameObject);
                     isDestroyed = true;
                 }

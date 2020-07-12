@@ -20,7 +20,7 @@ public class BulletController : MonoBehaviour {
 
 	private SpriteRenderer sprite;
 
-	private int currentTurn;
+	private int currentPlayerCount;
 
 	public GameObject explosionEffectPrefab;
 
@@ -33,7 +33,7 @@ public class BulletController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		currentTurn = GameManager.Instance.TurnBaseController.GetCurrentTurnTeamIndex();
+		currentPlayerCount = GameManager.Instance.TurnBaseController.GetAllTeamPlayerCount();
 		//GameManager.Instance.vCam.m_Lens.OrthographicSize = 5;
 		GameManager.Instance.vCam.Follow = gameObject.transform;
 		rb = GetComponent<Rigidbody2D>();
@@ -58,32 +58,33 @@ public class BulletController : MonoBehaviour {
 
 		}
 
-		if(transform.position.y < -8f || transform.position.x < -18f || transform.position.x > 18f)
+		if(transform.position.y < -9f || transform.position.x < -18f || transform.position.x > 18f)
         {
 			if(!isDestroyed)
-				DestroySelf(false);
+				DestroySelf(false, 0.5f);
 		}
 	}
 
-	private void DestroySelf(bool isDelay)
+	private void DestroySelf(bool isDelay, float duration = 2f)
     {
 		isDestroyed = true;
 		if (isDelay)
 		{
 			sprite.enabled = false;
-			rb.Sleep();
-			//两秒后切换摄像头，为了给特效时间
-			StartCoroutine(GameManager.Instance.DelayFuc(() => { Destroy(gameObject); if (currentTurn == GameManager.Instance.TurnBaseController.GetCurrentTurnTeamIndex()) { GameManager.Instance.TurnBaseController.EndTurn(); GameManager.Instance.TurnBaseController.StartTurn(); } }, 3f));
+			rb.velocity = Vector2.zero;
+			rb.isKinematic = true;
+			
 		}
-		else
-		{
-			if (currentTurn == GameManager.Instance.TurnBaseController.GetCurrentTurnTeamIndex())
-			{
-				GameManager.Instance.TurnBaseController.EndTurn(); GameManager.Instance.TurnBaseController.StartTurn();
-			}
+		//duration秒后切换摄像头，为了给特效时间
+		StartCoroutine(GameManager.Instance.DelayFuc(() => {
 			Destroy(gameObject);
-		}
-
+			if (currentPlayerCount == GameManager.Instance.TurnBaseController.GetAllTeamPlayerCount())
+			{
+				GameManager.Instance.TurnBaseController.EndTurn();
+				GameManager.Instance.TurnBaseController.StartTurn();
+			}
+		}, duration));
+		
 	}
 
 	void OnCollisionEnter2D( Collision2D coll ){

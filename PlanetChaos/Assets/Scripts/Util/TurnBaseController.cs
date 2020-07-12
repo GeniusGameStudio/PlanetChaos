@@ -97,6 +97,20 @@ namespace TurnBaseUtil
             return teams.Count;
         }
 
+        /// <summary>
+        /// 获取所有队伍玩家数
+        /// </summary>
+        /// <returns></returns>
+        public int GetAllTeamPlayerCount()
+        {
+            int tmp = 0;
+            foreach(var team in teams)
+            {
+                tmp += team.teamPlayers.Count;
+            }
+            return tmp;
+        }
+
         #endregion
 
         #region 回合操作

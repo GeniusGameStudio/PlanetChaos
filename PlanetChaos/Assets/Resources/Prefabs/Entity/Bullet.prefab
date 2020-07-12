@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5052632}
   - component: {fileID: 11452466}
   - component: {fileID: 45698343874255366}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Bullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 405652}
   - component: {fileID: 21239474}
   - component: {fileID: 6031864}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -299,7 +299,7 @@ GameObject:
   - component: {fileID: 495800}
   - component: {fileID: 19830054}
   - component: {fileID: 19906462}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BulletSmoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4998,7 +4998,7 @@ GameObject:
   m_Component:
   - component: {fileID: 464002}
   - component: {fileID: 5888074}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DestructionCircle
   m_TagString: BulletCollider
   m_Icon: {fileID: 0}
@@ -5046,7 +5046,7 @@ GameObject:
   - component: {fileID: 6699325136474291829}
   - component: {fileID: 3047186777894016067}
   - component: {fileID: 5621621604085209651}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BulletSmoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}

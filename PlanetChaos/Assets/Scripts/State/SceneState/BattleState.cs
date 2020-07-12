@@ -42,6 +42,9 @@ public class BattleState : ISceneState
 
         Button btnEndTurn = UITool.GetButton("EndTurnButton");
         btnEndTurn.onClick.AddListener(() => EndTurn(btnEndTurn));
+
+        Button btnBackToMainMenu2 = UITool.GetButton("BackToMainMenuButton2");
+        btnBackToMainMenu2.onClick.AddListener(() => BackToMainMenu2(btnBackToMainMenu2));
     }
 
     public override void StateUpdate()
@@ -55,6 +58,7 @@ public class BattleState : ISceneState
                 Time.timeScale = 0;
                 menuPanelRectTransform.DOLocalMoveX(-canvasRectTransform.rect.width / 2, 0.5f).SetUpdate(true);
                 isPaused = true;
+                UIManager.Instance.SetEndTurnButtonActive(false);
             }
             else
             {
@@ -62,6 +66,7 @@ public class BattleState : ISceneState
                 Time.timeScale = 1;
                 menuPanelRectTransform.DOLocalMoveX(-canvasRectTransform.rect.width / 2 - 300f, 0.5f).SetUpdate(true);
                 isPaused = false;
+                UIManager.Instance.SetEndTurnButtonActive(true);
             }
             
         }
@@ -95,6 +100,11 @@ public class BattleState : ISceneState
     private void ExitGame(Button button)
     {
         Application.Quit();
+    }
+
+    private void BackToMainMenu2(Button button)
+    {
+        m_Controller.SetState(new MainMenuState(m_Controller), "MainMenuScene");
     }
 
 }
