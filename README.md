@@ -34,5 +34,5 @@ Checkout the docs [here](https://github.com/GeniusGameStudio/PlanetChaos/tree/ma
 
 # What's next?
 
-3. Add more objects(tools and weapons) for fun!
-4. Fix new bugs.
+1. Add more objects(tools and weapons) for fun!
+2. Fix new bugs.
