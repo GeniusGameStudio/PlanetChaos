@@ -26,7 +26,11 @@ Checkout the docs [here](https://github.com/GeniusGameStudio/PlanetChaos/tree/ma
 
 ![gameplay_003](https://github.com/GeniusGameStudio/PlanetChaos/blob/master/SceenShots/gameplay003.png?raw=true)
 
+![gameplay_003](https://github.com/GeniusGameStudio/PlanetChaos/blob/master/SceenShots/gameplay004.png?raw=true)
 
+![gameplay_003](https://github.com/GeniusGameStudio/PlanetChaos/blob/master/SceenShots/gameplay005.png?raw=true)
+
+![gameplay_003](https://github.com/GeniusGameStudio/PlanetChaos/blob/master/SceenShots/gameplay006.png?raw=true)
 
 # What's next?
 
