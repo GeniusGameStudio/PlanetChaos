@@ -6,7 +6,7 @@ We spent about 2 weeks in making this game demo.
 
 Checkout the docs [here](https://github.com/GeniusGameStudio/PlanetChaos/tree/master/Docs).
 
-[Latest Test Release](https://github.com/GeniusGameStudio/PlanetChaos/releases/tag/0.05)
+[Latest Test Release](https://github.com/GeniusGameStudio/PlanetChaos/releases/tag/0.06)
 
 ## ScreenShots:
 
@@ -35,6 +35,8 @@ Checkout the docs [here](https://github.com/GeniusGameStudio/PlanetChaos/tree/ma
 ![gameplay_006](https://github.com/GeniusGameStudio/PlanetChaos/blob/master/SceenShots/gameplay006.png?raw=true)
 
 ![gameplay_007](https://github.com/GeniusGameStudio/PlanetChaos/blob/master/SceenShots/gameplay007.png?raw=true)
+
+![gameplay_008](https://github.com/GeniusGameStudio/PlanetChaos/blob/master/SceenShots/gameplay008.png?raw=true)
 
 # What's next?
 

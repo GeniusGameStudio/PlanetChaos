@@ -100,6 +100,14 @@ public class BulletController : MonoBehaviour {
 				SFX.PlayOneShot(boomSFX);
 			}
 		}
+		else if (coll.collider.CompareTag("BombBracket") && !isDestroyed)
+        {
+			updateAngle = false;
+			bulletSmoke.SetActive(false);
+			Invoke("RemoveEffectTrigger", 0.2f);
+			DestroySelf(true);
+			SFX.PlayOneShot(boomSFX);
+		}
 	}
 
 	void RemoveEffectTrigger()

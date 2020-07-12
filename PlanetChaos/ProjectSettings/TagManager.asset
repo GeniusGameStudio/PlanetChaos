@@ -9,6 +9,7 @@ TagManager:
   - Bullet
   - BulletCollider
   - Explosion
+  - BombBracket
   layers:
   - Default
   - TransparentFX

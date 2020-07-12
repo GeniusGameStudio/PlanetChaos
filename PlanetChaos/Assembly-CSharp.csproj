@@ -81,6 +81,7 @@
     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightFlicker.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightIntensityFade.cs" />
     <Compile Include="Assets\Scripts\Entity\Bazooka.cs" />
+    <Compile Include="Assets\Scripts\Entity\Bomb.cs" />
     <Compile Include="Assets\Scripts\Entity\ItemPanel.cs" />
     <Compile Include="Assets\Scripts\Entity\Team.cs" />
     <Compile Include="Assets\Scripts\Entity\TeamPlayer.cs" />
