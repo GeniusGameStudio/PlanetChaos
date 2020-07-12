@@ -6,11 +6,13 @@ We spent about 2 weeks in making this game demo.
 
 Checkout the docs [here](https://github.com/GeniusGameStudio/PlanetChaos/tree/master/Docs).
 
-[Latest Test Release](https://github.com/GeniusGameStudio/PlanetChaos/releases/tag/0.03)
+[Latest Test Release](https://github.com/GeniusGameStudio/PlanetChaos/releases/tag/0.04)
 
 ## ScreenShots:
 
 ![splash_image](https://github.com/GeniusGameStudio/PlanetChaos/blob/master/SceenShots/splash_image.png?raw=true)
+
+![startup](https://github.com/GeniusGameStudio/PlanetChaos/blob/master/SceenShots/startup.png?raw=true)
 
 ![main_menu](https://github.com/GeniusGameStudio/PlanetChaos/blob/master/SceenShots/main_menu.png?raw=true)
 
@@ -28,7 +30,5 @@ Checkout the docs [here](https://github.com/GeniusGameStudio/PlanetChaos/tree/ma
 
 # What's next?
 
-1. Add BGM and SFX.
-2. Add a new character.
 3. Add more objects(tools and weapons) for fun!
 4. Fix new bugs.
