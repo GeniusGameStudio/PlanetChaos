@@ -67,8 +67,11 @@ namespace TurnBaseUtil
                 belongsTo.UpdateHP();
                 RemoveSelf();
                 PlayerController.IsDead = true;
+                return;
             }
-            
+            ui.UpdatePlayerHP(hp);
+            belongsTo.UpdateHP();
+
         }
 
         void Start()
