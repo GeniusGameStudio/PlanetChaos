@@ -63,11 +63,12 @@ namespace TurnBaseUtil
                 PlayerController.GetComponent<Animator>().SetTrigger("Die");
                 PlayerController.GetComponent<AudioSource>().PlayOneShot(PlayerController.dieSFX);
                 ui.SetHudActive(false);
+                ui.UpdatePlayerHP(hp);
+                belongsTo.UpdateHP();
                 RemoveSelf();
                 PlayerController.IsDead = true;
             }
-            ui.UpdatePlayerHP(hp);
-            belongsTo.UpdateHP();
+            
         }
 
         void Start()

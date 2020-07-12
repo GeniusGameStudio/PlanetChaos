@@ -44,6 +44,11 @@ public class UIManager : MonoBehaviour
 
     public bool isEnd;
 
+    public Transform infoTip;
+    public Text infoTipText;
+
+    public bool isOpenedBag { get; set; }
+
     void Start()
     {
         maskA_Width = teamA_HP_Mask.sizeDelta.x;
@@ -80,6 +85,16 @@ public class UIManager : MonoBehaviour
         isEnd = true;
     }
 
+    public void SetInfoTipActive(bool isActive)
+    {
+        infoTip.gameObject.SetActive(isActive);
+    }
+
+    public void SetInfoTipText(string text)
+    {
+        infoTipText.text = text;
+    }
+
     public void SetEndTurnButtonActive(bool isActive)
     {
         endTurnButton.gameObject.SetActive(isActive);
@@ -108,6 +123,8 @@ public class UIManager : MonoBehaviour
         {
             windArrow.localScale = new Vector3(1, 1, 1);
         }
+
+        GameManager.Instance.CheckPlayer();
     }
 
     void OnTurnEndAction()

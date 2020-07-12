@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - AudioManager
     - Bazooka
     - BlinkText
     - BulletController
@@ -10,6 +11,7 @@ ScriptsOnlyBuild:
     - GameLoop
     - GameManager
     - GroundController
+    - ItemPanel
     - MyButton
     - PlayerController
     - PlayerUI
@@ -57,6 +59,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.InputField
     - UnityEngine.UI.Mask
     - UnityEngine.UI.Shadow
+    - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/BattleScene.unity:
@@ -148,6 +151,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 14604}
     - Class: 114
       Script: {instanceID: 14658}
+    - Class: 114
+      Script: {instanceID: 66574}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -169,6 +174,12 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 241
+      Script: {instanceID: 0}
+    - Class: 243
+      Script: {instanceID: 0}
+    - Class: 245
       Script: {instanceID: 0}
     Assets/Scenes/MainMenuScene.unity:
     - Class: 1
@@ -209,6 +220,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 14000}
     - Class: 114
       Script: {instanceID: 14658}
+    - Class: 114
+      Script: {instanceID: 14706}
+    - Class: 114
+      Script: {instanceID: 17928}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -224,6 +239,12 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 241
+      Script: {instanceID: 0}
+    - Class: 243
+      Script: {instanceID: 0}
+    - Class: 245
       Script: {instanceID: 0}
     Assets/Scenes/StartScene.unity:
     - Class: 1
@@ -319,6 +340,12 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 241
+      Script: {instanceID: 0}
+    - Class: 243
+      Script: {instanceID: 0}
+    - Class: 245
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -887,7 +914,7 @@ ScriptsOnlyBuild:
     className: CinemachineSameAsFollowTarget
   - hash:
       serializedVersion: 2
-      Hash: f7f4b44a30e92b64d6e3eaeb50602d57
+      Hash: d55977c2da0e7f6d7c90edb942101313
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UIManager
@@ -1145,7 +1172,7 @@ ScriptsOnlyBuild:
     className: Outline
   - hash:
       serializedVersion: 2
-      Hash: 993d20735d0ae9db88930121639a6e88
+      Hash: 6ebb11ab817eab786aa6c89ca2e5b5f0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -1251,9 +1278,21 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: d835e37be8caf473a0d64dc941f2a2a8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AudioManager
+  - hash:
+      serializedVersion: 2
+      Hash: f10a60aa51a900becb737d2d6fdbc301
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ItemPanel
   platform: 19
   scenePathNames:
   - Assets/Scenes/StartScene.unity
   - Assets/Scenes/MainMenuScene.unity
   - Assets/Scenes/BattleScene.unity
-  playerPath: D:/JackZhang/UnityBuild/PlanetChaos_test004/PlanetChaos.exe
+  playerPath: D:/JackZhang/UnityBuild/PlanetChaos_test005/PlanetChaos.exe

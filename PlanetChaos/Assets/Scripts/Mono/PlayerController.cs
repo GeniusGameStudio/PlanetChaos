@@ -1,9 +1,10 @@
-﻿using System.Collections;
+﻿using DG.Tweening;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using TurnBaseUtil;
 using UnityEngine;
-
+using static Global;
 public class PlayerController : MonoBehaviour
 {
     //移动速度
@@ -104,7 +105,11 @@ public class PlayerController : MonoBehaviour
     public AudioClip chargeSFX;
     public AudioClip shootSFX;
 
+    public bool[] useWeapon = new bool[16];
+
     public bool IsDead { get; set; }
+
+
     private void OnEnable()
     {
         canControl = true;
@@ -310,6 +315,15 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void UseBazooka()
+    {
+        targetting = true;
+        weaponTransform.gameObject.SetActive(true);
+        UITool.FindUIGameObject("BagPanel").transform.DOLocalMoveX(600, 1f);
+        UIManager.Instance.isOpenedBag = false;
+        
+    }
+
     void Update()
     {
         UpdateCamera();
@@ -320,12 +334,12 @@ public class PlayerController : MonoBehaviour
             ProcessInput();
             UpdateCheck();
 
-            if (Input.GetKeyDown(KeyCode.W))
+            if (useWeapon[(int)Weapon.BAZOOKA])
             {
-                targetting = true;
-                weaponTransform.gameObject.SetActive(true);
+                UseBazooka();
             }
-            
+            ClearWeaponBoolean();
+
         }
 
         if (targetting)
@@ -404,5 +418,10 @@ public class PlayerController : MonoBehaviour
         {
             rb.gravityScale = gravityScale;
         }
+    }
+
+    public void ClearWeaponBoolean()
+    {
+        useWeapon = new bool[16];
     }
 }

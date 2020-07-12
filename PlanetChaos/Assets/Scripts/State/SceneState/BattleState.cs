@@ -8,6 +8,8 @@ public class BattleState : ISceneState
 {
     private bool isPaused;
 
+    
+
     private RectTransform canvasRectTransform;
 
     private RectTransform menuPanelRectTransform;
@@ -51,6 +53,7 @@ public class BattleState : ISceneState
     public override void StateUpdate()
     {
         //按键监听
+        //ESC打开菜单
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (!isPaused)
@@ -72,6 +75,20 @@ public class BattleState : ISceneState
                     UIManager.Instance.SetEndTurnButtonActive(true);
             }
             
+        }
+        //B键打开道具物品栏
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            if (!UIManager.Instance.isOpenedBag)
+            {
+                UITool.FindUIGameObject("BagPanel").transform.DOLocalMoveX(250, 1f);
+                UIManager.Instance.isOpenedBag = true;
+            }
+            else
+            {
+                UITool.FindUIGameObject("BagPanel").transform.DOLocalMoveX(600, 1f);
+                UIManager.Instance.isOpenedBag = false;
+            }
         }
     }
 

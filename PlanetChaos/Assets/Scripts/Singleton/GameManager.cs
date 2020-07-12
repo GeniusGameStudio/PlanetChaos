@@ -87,6 +87,16 @@ public class GameManager : MonoBehaviour
         StartCoroutine(DelayFuc(() => { SendMessage("GameInited"); InitGame(); }, 0.2f));
     }
 
+    public void CheckPlayer()
+    {
+        if(TurnBaseController.GetCurrentTurnTeam().GetCurrentTurnPlayer().PlayerController == null ||
+            TurnBaseController.GetCurrentTurnTeam().GetCurrentTurnPlayer().PlayerController.enabled == false)
+        {
+            TurnBaseController.EndTurn();
+            TurnBaseController.StartTurn();
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {

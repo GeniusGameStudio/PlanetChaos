@@ -50,7 +50,13 @@ public class MainMenuState : ISceneState
 
         btnExitGame.onClick.AddListener(() =>OnExitGameBtnClick(btnExitGame));
 
-        
+        Button btnAudio = UITool.GetButton("AudioButton");
+
+        btnAudio.onClick.AddListener(() => OnAudioBtnClick(btnAudio));
+
+        Button btnCloseAudio = UITool.GetButton("CloseButton");
+
+        btnCloseAudio.onClick.AddListener(() => OnCloseAudioManagerBtnClick(btnCloseAudio));
 
     }
 
@@ -117,4 +123,23 @@ public class MainMenuState : ISceneState
     {
         Application.Quit();
     }
+
+    /// <summary>
+    /// 音量控制按下
+    /// </summary>
+    private void OnAudioBtnClick(Button button)
+    {
+        UITool.FindUIGameObject("AudioManagerPanel").transform.DOLocalMoveY(0, 0.5f);
+    }
+
+    /// <summary>
+    /// 关闭音量控制面板按下
+    /// </summary>
+    /// <param name="button"></param>
+    private void OnCloseAudioManagerBtnClick(Button button)
+    {
+        UITool.FindUIGameObject("AudioManagerPanel").transform.DOLocalMoveY(500, 0.5f);
+    }
+
+
 }

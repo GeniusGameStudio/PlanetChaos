@@ -81,6 +81,7 @@
     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightFlicker.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightIntensityFade.cs" />
     <Compile Include="Assets\Scripts\Entity\Bazooka.cs" />
+    <Compile Include="Assets\Scripts\Entity\ItemPanel.cs" />
     <Compile Include="Assets\Scripts\Entity\Team.cs" />
     <Compile Include="Assets\Scripts\Entity\TeamPlayer.cs" />
     <Compile Include="Assets\Scripts\GameLoop\GameLoop.cs" />
@@ -90,6 +91,7 @@
     <Compile Include="Assets\Scripts\Mono\MyButton.cs" />
     <Compile Include="Assets\Scripts\Mono\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Mono\PlayerUI.cs" />
+    <Compile Include="Assets\Scripts\Singleton\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Singleton\GameManager.cs" />
     <Compile Include="Assets\Scripts\Singleton\UIManager.cs" />
     <Compile Include="Assets\Scripts\State\SceneState\BattleState.cs" />
