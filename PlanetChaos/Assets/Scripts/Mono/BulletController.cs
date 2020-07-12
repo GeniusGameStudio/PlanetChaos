@@ -28,6 +28,9 @@ public class BulletController : MonoBehaviour {
 
 	private GameObject explosionEffectObject;
 
+	private AudioSource SFX;
+	public AudioClip boomSFX;
+
 	// Use this for initialization
 	void Start () {
 		currentTurn = GameManager.Instance.TurnBaseController.GetCurrentTurnTeamIndex();
@@ -35,6 +38,7 @@ public class BulletController : MonoBehaviour {
 		GameManager.Instance.vCam.Follow = gameObject.transform;
 		rb = GetComponent<Rigidbody2D>();
 		sprite = GetComponentInChildren<SpriteRenderer>();
+		SFX = GetComponent<AudioSource>();
 		//rb.velocity = new Vector2(5f, 10f);
 		
 		Debug.Log("winforce:" + GameManager.Instance.TurnBaseController.TurnProperties.WindForce);
@@ -92,6 +96,7 @@ public class BulletController : MonoBehaviour {
 				explosionEffectObject = Instantiate(explosionEffectPrefab, transform.position, Quaternion.identity);
 				Invoke("RemoveEffectTrigger", 0.2f);
 				DestroySelf(true);
+				SFX.PlayOneShot(boomSFX);
 			}
 		}
 	}

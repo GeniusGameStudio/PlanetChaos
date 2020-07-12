@@ -84,6 +84,7 @@
     <Compile Include="Assets\Scripts\Entity\Team.cs" />
     <Compile Include="Assets\Scripts\Entity\TeamPlayer.cs" />
     <Compile Include="Assets\Scripts\GameLoop\GameLoop.cs" />
+    <Compile Include="Assets\Scripts\Mono\BlinkText.cs" />
     <Compile Include="Assets\Scripts\Mono\BulletController.cs" />
     <Compile Include="Assets\Scripts\Mono\GroundController.cs" />
     <Compile Include="Assets\Scripts\Mono\MyButton.cs" />

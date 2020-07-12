@@ -18,6 +18,12 @@ public class BattleState : ISceneState
 
     public override void StateBegin()
     {
+        //BGM切换
+        GameObject gameloop = UnityTool.FindGameObject("GameLoop");
+        GameLoop gameLoopScript = gameloop.GetComponent<GameLoop>();
+        AudioSource audio = gameloop.GetComponent<AudioSource>();
+        audio.clip = gameLoopScript.battleGame;
+        audio.Play();
 
         GameObject canvas = UITool.FindUIGameObject("Canvas");
         canvasRectTransform = canvas.GetComponent<RectTransform>();

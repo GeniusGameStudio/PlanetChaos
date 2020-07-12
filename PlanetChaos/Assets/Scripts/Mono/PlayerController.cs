@@ -98,6 +98,13 @@ public class PlayerController : MonoBehaviour
 
     public float boomForceValue = 150;
 
+    private AudioSource SFX;
+    public AudioClip jumpSFX;
+    public AudioClip dieSFX;
+    public AudioClip chargeSFX;
+    public AudioClip shootSFX;
+
+
     private void OnEnable()
     {
         canControl = true;
@@ -132,6 +139,7 @@ public class PlayerController : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         ui = GetComponent<PlayerUI>();
         player = GetComponent<TeamPlayer>();
+        SFX = GetComponent<AudioSource>();
         weaponTransform = transform.Find("Bazooka").gameObject.transform;
         bodyTransform = transform;
         gravityScale = rb.gravityScale;
@@ -164,6 +172,8 @@ public class PlayerController : MonoBehaviour
             shooting = true;
             shootingEffect.SetActive(true);
             timeShooting = 0f;
+            SFX.PlayOneShot(chargeSFX);
+            
         }
     }
 
@@ -178,13 +188,16 @@ public class PlayerController : MonoBehaviour
             shooting = false;
             shootingEffect.SetActive(false);
             Shoot();
-
+            SFX.Stop();
+            SFX.PlayOneShot(shootSFX);
         }
         if (timeShooting > maxTimeShooting)
         {
             shooting = false;
             shootingEffect.SetActive(false);
             Shoot();
+            SFX.Stop();
+            SFX.PlayOneShot(shootSFX);
         }
         canControl = false;
     }
@@ -286,6 +299,7 @@ public class PlayerController : MonoBehaviour
                 isJump = true;
                 rb.AddForce(new Vector2(0, jumpForce));
                 isJumpButtonDown = false;
+                SFX.PlayOneShot(jumpSFX);
             }
         }
         else

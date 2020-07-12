@@ -7,6 +7,10 @@ public class GameLoop : MonoBehaviour
     //场景状态
     SceneStateController m_SceneStateController = new SceneStateController();
 
+    //BGM
+    public AudioClip start;
+    public AudioClip battleGame;
+
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);

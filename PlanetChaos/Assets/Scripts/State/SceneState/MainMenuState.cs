@@ -15,8 +15,16 @@ public class MainMenuState : ISceneState
     //开始
     public override void StateBegin()
     {
-        //数据加载TODO
-
+        //BGM切换
+        GameObject gameloop = UnityTool.FindGameObject("GameLoop");
+        GameLoop gameLoopScript = gameloop.GetComponent<GameLoop>();
+        AudioSource audio = gameloop.GetComponent<AudioSource>();
+        if (audio.clip != gameLoopScript.start)
+        {
+            audio.clip = gameLoopScript.start;
+            audio.Play();
+        }
+       
         //按钮监听
         Button btnStartGame = UITool.GetButton("StartGameButton");
 

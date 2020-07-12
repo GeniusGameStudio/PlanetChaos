@@ -61,7 +61,8 @@ namespace TurnBaseUtil
             {
                 hp = 0;
                 PlayerController.GetComponent<Animator>().SetTrigger("Die");
-                PlayerController.enabled = false;
+                PlayerController.GetComponent<AudioSource>().PlayOneShot(PlayerController.dieSFX);
+                PlayerController.GetComponent<Rigidbody2D>().Sleep();
                 ui.SetHudActive(false);
                 belongsTo.RemoveTeamPlayer(this);
             }
