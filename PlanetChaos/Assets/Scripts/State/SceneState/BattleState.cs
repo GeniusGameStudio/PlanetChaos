@@ -11,6 +11,7 @@ public class BattleState : ISceneState
     private RectTransform canvasRectTransform;
 
     private RectTransform menuPanelRectTransform;
+
     public BattleState(SceneStateController Controller) : base(Controller)
     {
         this.StateName = "BattleState";
@@ -58,7 +59,8 @@ public class BattleState : ISceneState
                 Time.timeScale = 0;
                 menuPanelRectTransform.DOLocalMoveX(-canvasRectTransform.rect.width / 2, 0.5f).SetUpdate(true);
                 isPaused = true;
-                UIManager.Instance.SetEndTurnButtonActive(false);
+                if(!UIManager.Instance.isEnd)
+                    UIManager.Instance.SetEndTurnButtonActive(false);
             }
             else
             {
@@ -66,7 +68,8 @@ public class BattleState : ISceneState
                 Time.timeScale = 1;
                 menuPanelRectTransform.DOLocalMoveX(-canvasRectTransform.rect.width / 2 - 300f, 0.5f).SetUpdate(true);
                 isPaused = false;
-                UIManager.Instance.SetEndTurnButtonActive(true);
+                if (!UIManager.Instance.isEnd)
+                    UIManager.Instance.SetEndTurnButtonActive(true);
             }
             
         }

@@ -38,9 +38,11 @@ public class UIManager : MonoBehaviour
     public Sprite teamB_Sprite;
     public Image teamImage;
 
-    public RectTransform endTurnButton;
+    public Transform endTurnButton;
     private float endX;
     private float endY;
+
+    public bool isEnd;
 
     void Start()
     {
@@ -74,21 +76,13 @@ public class UIManager : MonoBehaviour
         }
 
         winPanel.DOLocalMoveY(0, 0).SetUpdate(true);
-        UIManager.Instance.SetEndTurnButtonActive(false);
+        SetEndTurnButtonActive(false);
+        isEnd = true;
     }
 
     public void SetEndTurnButtonActive(bool isActive)
     {
-        if (isActive)
-        {
-            endTurnButton.DOMoveX(endX, 0);
-            endTurnButton.DOMoveY(endY, 0);
-        }
-        else
-        {
-            endTurnButton.DOMoveX(endX, 0);
-            endTurnButton.DOMoveY(500, 0);
-        }
+        endTurnButton.gameObject.SetActive(isActive);
     }
 
     public void GameInited()
