@@ -66,7 +66,8 @@ public class MainMenuState : ISceneState
     /// <param name="button"></param>
     private void OnStartGameBtnClick(Button button)
     {
-        
+        Global.teamA.teamPlayers.Clear();
+        Global.teamB.teamPlayers.Clear();
         Global.teamA.AddTeamPlayer(new TeamPlayer(UITool.GetUIComponent<Text>("PlayerA1_Name").text, Global.teamA_Color));
         Debug.Log(UITool.GetUIComponent<InputField>("PlayerA1_Input").text);
         Global.teamA.AddTeamPlayer(new TeamPlayer(UITool.GetUIComponent<Text>("PlayerA2_Name").text, Global.teamA_Color));

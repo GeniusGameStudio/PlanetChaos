@@ -65,7 +65,8 @@ namespace TurnBaseUtil
                 ui.SetHudActive(false);
                 ui.UpdatePlayerHP(hp);
                 belongsTo.UpdateHP();
-                RemoveSelf();
+                Invoke("RemoveSelf", 2f);
+                //RemoveSelf();
                 PlayerController.IsDead = true;
                 return;
             }
@@ -96,6 +97,8 @@ namespace TurnBaseUtil
                 GameManager.Instance.vCam.Follow = winTeam.GetCurrentTurnPlayer().gameObject.transform;
                 //Time.timeScale = 0;
             }
+
+            
         }
 
         void Update()
@@ -107,7 +110,8 @@ namespace TurnBaseUtil
                     hp = 0;
                     ui.UpdatePlayerHP(hp);
                     belongsTo.UpdateHP();
-                    RemoveSelf();
+                    Invoke("RemoveSelf", 2f);
+                    //RemoveSelf();
                     Destroy(gameObject);
                     isDestroyed = true;
                 }

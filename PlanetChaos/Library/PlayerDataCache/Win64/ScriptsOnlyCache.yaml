@@ -103,61 +103,61 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11178}
     - Class: 114
-      Script: {instanceID: 11202}
+      Script: {instanceID: 11212}
     - Class: 114
-      Script: {instanceID: 11528}
+      Script: {instanceID: 11538}
     - Class: 114
-      Script: {instanceID: 11592}
+      Script: {instanceID: 11602}
     - Class: 114
-      Script: {instanceID: 11698}
+      Script: {instanceID: 11708}
     - Class: 114
-      Script: {instanceID: 11764}
+      Script: {instanceID: 11774}
     - Class: 114
-      Script: {instanceID: 12124}
+      Script: {instanceID: 12134}
     - Class: 114
-      Script: {instanceID: 12310}
+      Script: {instanceID: 12320}
     - Class: 114
-      Script: {instanceID: 12394}
+      Script: {instanceID: 12404}
     - Class: 114
-      Script: {instanceID: 12408}
+      Script: {instanceID: 12418}
     - Class: 114
-      Script: {instanceID: 12448}
+      Script: {instanceID: 12458}
     - Class: 114
-      Script: {instanceID: 12788}
+      Script: {instanceID: 12798}
     - Class: 114
-      Script: {instanceID: 12844}
+      Script: {instanceID: 12846}
     - Class: 114
-      Script: {instanceID: 12868}
+      Script: {instanceID: 12856}
     - Class: 114
-      Script: {instanceID: 12944}
+      Script: {instanceID: 12880}
     - Class: 114
-      Script: {instanceID: 13050}
+      Script: {instanceID: 12956}
     - Class: 114
-      Script: {instanceID: 13068}
+      Script: {instanceID: 13062}
     - Class: 114
-      Script: {instanceID: 13130}
+      Script: {instanceID: 13080}
     - Class: 114
-      Script: {instanceID: 13146}
+      Script: {instanceID: 13142}
     - Class: 114
-      Script: {instanceID: 13426}
+      Script: {instanceID: 13158}
     - Class: 114
-      Script: {instanceID: 13550}
+      Script: {instanceID: 13438}
     - Class: 114
-      Script: {instanceID: 13628}
+      Script: {instanceID: 13562}
     - Class: 114
-      Script: {instanceID: 14002}
+      Script: {instanceID: 13640}
     - Class: 114
-      Script: {instanceID: 14124}
+      Script: {instanceID: 14014}
     - Class: 114
-      Script: {instanceID: 14562}
+      Script: {instanceID: 14136}
     - Class: 114
-      Script: {instanceID: 14594}
+      Script: {instanceID: 14574}
     - Class: 114
       Script: {instanceID: 14606}
     - Class: 114
-      Script: {instanceID: 14660}
+      Script: {instanceID: 14618}
     - Class: 114
-      Script: {instanceID: 21252}
+      Script: {instanceID: 14672}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -208,27 +208,27 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11202}
+      Script: {instanceID: 11212}
     - Class: 114
-      Script: {instanceID: 11528}
+      Script: {instanceID: 11538}
     - Class: 114
-      Script: {instanceID: 11592}
+      Script: {instanceID: 11602}
     - Class: 114
-      Script: {instanceID: 12310}
+      Script: {instanceID: 12320}
     - Class: 114
-      Script: {instanceID: 13130}
+      Script: {instanceID: 13142}
     - Class: 114
-      Script: {instanceID: 13146}
+      Script: {instanceID: 13158}
     - Class: 114
-      Script: {instanceID: 13466}
+      Script: {instanceID: 13478}
     - Class: 114
-      Script: {instanceID: 14002}
+      Script: {instanceID: 14014}
     - Class: 114
-      Script: {instanceID: 14660}
+      Script: {instanceID: 14672}
     - Class: 114
-      Script: {instanceID: 14708}
+      Script: {instanceID: 14720}
     - Class: 114
-      Script: {instanceID: 14722}
+      Script: {instanceID: 14734}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -293,41 +293,41 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11178}
     - Class: 114
-      Script: {instanceID: 11202}
+      Script: {instanceID: 11212}
     - Class: 114
-      Script: {instanceID: 11528}
+      Script: {instanceID: 11538}
     - Class: 114
-      Script: {instanceID: 11592}
+      Script: {instanceID: 11602}
     - Class: 114
-      Script: {instanceID: 12226}
+      Script: {instanceID: 12236}
     - Class: 114
-      Script: {instanceID: 12310}
+      Script: {instanceID: 12320}
     - Class: 114
-      Script: {instanceID: 12408}
+      Script: {instanceID: 12418}
     - Class: 114
-      Script: {instanceID: 12412}
+      Script: {instanceID: 12422}
     - Class: 114
-      Script: {instanceID: 12844}
+      Script: {instanceID: 12846}
     - Class: 114
-      Script: {instanceID: 12868}
+      Script: {instanceID: 12856}
     - Class: 114
-      Script: {instanceID: 12954}
+      Script: {instanceID: 12880}
     - Class: 114
-      Script: {instanceID: 13050}
+      Script: {instanceID: 12966}
     - Class: 114
-      Script: {instanceID: 13068}
+      Script: {instanceID: 13062}
     - Class: 114
-      Script: {instanceID: 14002}
+      Script: {instanceID: 13080}
     - Class: 114
-      Script: {instanceID: 14562}
+      Script: {instanceID: 14014}
     - Class: 114
-      Script: {instanceID: 14594}
+      Script: {instanceID: 14574}
     - Class: 114
-      Script: {instanceID: 14660}
+      Script: {instanceID: 14606}
     - Class: 114
-      Script: {instanceID: 14768}
+      Script: {instanceID: 14672}
     - Class: 114
-      Script: {instanceID: 21252}
+      Script: {instanceID: 14780}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -789,6 +789,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.U2D.Animation
     className: SpriteSkinEntity
+  - hash:
+      serializedVersion: 2
+      Hash: 3ceeea96dcc6eb2bf6b9f3188accdb6b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Bomb
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1299,15 +1305,9 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 3ceeea96dcc6eb2bf6b9f3188accdb6b
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Bomb
   platform: 19
   scenePathNames:
   - Assets/Scenes/StartScene.unity
   - Assets/Scenes/MainMenuScene.unity
   - Assets/Scenes/BattleScene.unity
-  playerPath: D:/JackZhang/UnityBuild/PlanetChaos_test006/PlanetChaos.exe
+  playerPath: D:/JackZhang/UnityBuild/PlanetChaos_test007/PlanetChaos.exe

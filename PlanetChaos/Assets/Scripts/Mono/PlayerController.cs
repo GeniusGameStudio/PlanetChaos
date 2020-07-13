@@ -341,6 +341,11 @@ public class PlayerController : MonoBehaviour
             ClearWeaponBoolean();
 
         }
+        else
+        {
+            anim.SetBool("isWalk", false);
+            anim.SetBool("isJump", false);
+        }
 
         if (targetting)
         {

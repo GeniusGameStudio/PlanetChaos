@@ -89,6 +89,8 @@ public class GameManager : MonoBehaviour
 
     public void CheckPlayer()
     {
+        Debug.Log("当前是队伍" + TurnBaseController.GetCurrentTurnTeam().Name + "的第" + TurnBaseController.GetCurrentTurnTeam().GetCurrentTurnPlayerIndex() + "个玩家的回合");
+        Debug.Log("该玩家的昵称为: " + TurnBaseController.GetCurrentTurnTeam().GetCurrentTurnPlayer().Name);
         if(TurnBaseController.GetCurrentTurnTeam().GetCurrentTurnPlayer().PlayerController == null ||
             TurnBaseController.GetCurrentTurnTeam().GetCurrentTurnPlayer().PlayerController.enabled == false)
         {
