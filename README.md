@@ -6,7 +6,7 @@ We spent about 2 weeks in making this game demo.
 
 Checkout the docs [here](https://github.com/GeniusGameStudio/PlanetChaos/tree/master/Docs).
 
-[Latest Test Release](https://github.com/GeniusGameStudio/PlanetChaos/releases/tag/0.06)
+[Latest Test Release](https://github.com/GeniusGameStudio/PlanetChaos/releases/tag/0.07)
 
 ## ScreenShots:
 
