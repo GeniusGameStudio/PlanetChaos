@@ -18,6 +18,7 @@ public class ItemPanel : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
     {
         PlayerController currentPlayer = GameManager.Instance.TurnBaseController.GetCurrentTurnTeam().GetCurrentTurnPlayer().PlayerController;
         currentPlayer.useWeapon[(int)Weapon.BAZOOKA] = true;
+        UIManager.Instance.SetEndTurnButtonActive(false);
     }
 
     public void OnPointerEnter(PointerEventData eventData)
